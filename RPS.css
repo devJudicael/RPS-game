@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Micro+5&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Signika+Negative:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Madimi+One&family=Micro+5&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Signika+Negative:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Micro+5&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Micro+5&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Signika+Negative:wght@300..700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #21212a;
+}
+
+.titre{
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    color: rgb(0, 119, 255);
+    font-size: 4rem;
+    padding: 22px;
+}
+
+.player1 , .player2{
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+.all {
+    display: flex;
+    justify-content: center;
+}
+
+.img{
+    background-size: cover;
+    background-position: center;
+    width: 135px;
+    height: 135px;
+    margin: 10px 10px;
+    transition: .3s;
+}
+
+.img:hover{
+    filter: brightness(.50) opacity(.90) saturate(1.3) blur(.5px);
+}
+
+.imga{
+    background-size: cover;
+    background-position: center;
+    width: 135px;
+    height: 135px;
+    margin: 10px 10px;
+}
+
+.content1 {
+    background-image: url(images/card1.png);
+}
+
+.content2 {
+    background-image: url(images/card2.png);
+}
+
+.content3 {
+    background-image: url(images/card3.png);
+}
+
+.vs{
+    text-align: center;
+    font-size: 3.6rem;
+    color: rgb(247, 65, 65);
+    font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ia{
+    
+   
+    background-image: url(images/card2.png);
+}
+
+.iu {
+    animation: bgchange 1s linear infinite;
+}
+
+.place{
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes bgchange {
+    from{
+        background-image: url(images/card2.png);
+    }
+
+    34%{
+        background-image: url(images/card1.png);
+    }
+
+    to{
+        background-image: url(images/card3.png);
+    }
+}
+
+.winer {
+    display: flex;
+    justify-content: center;
+   
+
+}
+
+p{
+    color: white;
+    font-size: 2.5rem;
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    transition: .2s;
+    padding: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.bouton{
+    display: flex;
+    justify-content: center;
+    margin: 13px 0;
+}
+
+.play{
+    padding: 17px 30px;
+    border: 0;
+    color: white;
+    background-color: #245ed3;
+    font-size: 2rem;
+    border-radius: 12px;
+    font-family: "Micro 5", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    transition: .3s;
+}
+
+.link:hover{
+    background-color: #193d84;
+}
+
+.play1{
+    position: absolute;
+   z-index: 2;
+    
+}
+
+.play2{
+    position: absolute;
+    z-index: 1;
+    visibility: hidden;
+        
+}
+
+.link {
+    cursor: pointer;
+}
+
+.selected{
+    border:5px solid #245ed3;
+    border-radius: 15px;
+}
+
+.active {
+    cursor: not-allowed;
+    opacity: 0.5;
+    background-color: rgba(128, 128, 128, 0.717);
+}
+
+.noselec {
+    pointer-events: none;
+}
+
+
+.redborder {
+    border: 3px solid orangered;
+}
+
+.greenborder {
+    border: 3px solid green;
+}
+
+.grayborder {
+    border: 3px solid rgb(110, 88, 88);
+}
+
+
+.info{
+    width: 17%;
+    height: auto;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    border: 3px solid rgba(128, 128, 128, 0.87);
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    overflow: hidden;
+    animation: move 3s linear .2s normal forwards;
+    transform: translate(-270px , -530px);
+}
+
+@keyframes move {
+    from{
+        transform: translate(-270px , -530px);
+    }
+
+        60%{
+            transform: translate(14px , -530px);
+        }
+
+        to {
+            transform: translate(14px , -530px);
+        }
+    
+}
+
+.upy {
+    font-size: 1.3rem;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    padding: 14px;
+}
+
+.style {
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    color: rgb(0, 170, 255);
+}
+
+.lucky {
+    font-size: 1.2rem;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    padding: 14px;
+}
+
+.up{
+         background-color: rebeccapurple;
+}
+
+.down {
+    background-color: #245ed3;
+}
+
+.p{
+    animation: scale .4s linear .500ms infinite;
+}
+
+.copyright {
+    font-family: "Montserrat", sans-serif;
+    color: gray;
+    text-align: center;
+    width: 100%;
+    margin-top: 80px;
+}
+
+
+@keyframes scale {
+    from{
+        transform: scaleX(1);
+        visibility: visible;
+        opacity: 1;
+    }
+        
+        50%{
+            transform: scaleX(1.6);
+        visibility: hidden;
+        opacity: 0;
+
+        to{
+            transform: scaleX(1);
+        visibility: visible;
+        opacity: 1;
+        }
+        }
+        
+    
+}
+
+
+@media screen and (max-width:918px) {
+    
+    .info {
+        display: none;
+    }
+
+    .copyright {
+        text-align: center;
+    }
+
+
+}
+
+@media screen and (max-width:700px) {
+
+    .img , .ia {
+        width: 100px;
+        height: 100px;
+    }
+
+    .titre {
+        font-size: 2.8rem;
+    }
+
+    .selected{
+    border:3px solid #245ed3;
+    border-radius: 15px;
+}
+
+.img {
+    margin: 10px 5px;
+}
+
+
+}
+
+
+@media screen and (max-width:370px) {
+
+    .img {
+        height: 87px;
+        width: 87px;
+        margin: 10px 2.5px;
+        
+    }
+
+    .selected{
+        border:2.5px solid #245ed3;
+        border-radius: 15px;
+    }
+
+}
