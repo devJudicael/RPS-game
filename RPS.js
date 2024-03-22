@@ -30,7 +30,7 @@ var ia  = Math.floor((Math.random() * 3 ) )+1;
 
 var p = document.querySelector(".p")
 var play1 = document.querySelector(".play1"); 
-let play2 = document.querySelector(".play2")
+let play2 = document.querySelector(".play2");
 
        
            
@@ -39,7 +39,7 @@ let play2 = document.querySelector(".play2")
  
 
 // selectionner toutes les images du player avec all
-var all=document.querySelectorAll(".imag") // renvoie un tableau
+var all=document.querySelectorAll(".imag"); // renvoie un tableau
 
     // forEach permet de parcourir tous les elements d'un tableau
 
@@ -106,7 +106,7 @@ all.forEach(image => {
             image.addEventListener('click',()=>{
                 refresh()
 
-            } ) } ) 
+            } ) } ) ;
            
 
             
@@ -119,11 +119,11 @@ all.forEach(image => {
    
     var src = `images/card${ia}.png`
 
-        document.querySelector(".ia").style.backgroundImage = "url("+src+")"
-        document.querySelector(".ia").classList.remove ("iu")
+        document.querySelector(".ia").style.backgroundImage = "url("+src+")";
+        document.querySelector(".ia").classList.remove ("iu");
 
 
-        }
+        };
    
             // au click de play , empêcher de changer de choix
    play1.addEventListener('click', ()=> {
@@ -133,17 +133,17 @@ all.forEach(image => {
 
 
         for ( i = 0; i < toge.length; i++) {
-            toge[i].classList.add("noselec")
+            toge[i].classList.add("noselec");
                 
                
                 
-            }
+            };
 
             
 
                 
                 play2.style.zIndex="3";
-                play2.style.visibility="visible"
+                play2.style.visibility="visible";
 
                 // si player met pierre et ia ciseaux
                 if (position==1 && ia ==3) {
