@@ -29,6 +29,8 @@ let i;
 var ia  = Math.floor((Math.random() * 3 ) )+1;
 
 var p = document.querySelector(".p")
+var play1 = document.querySelector(".play1"); 
+let play2 = document.querySelector(".play2")
 
        
            
@@ -123,8 +125,8 @@ all.forEach(image => {
 
         }
    
-            // au click de play
-   document.querySelector(".play1").addEventListener('click', ()=> {
+            // au click de play , empêcher de changer de choix
+   play1.addEventListener('click', ()=> {
 
     let toge = document.querySelectorAll(".imag")
         starting()
@@ -139,7 +141,7 @@ all.forEach(image => {
 
             
 
-                let play2 = document.querySelector(".play2")
+                
                 play2.style.zIndex="3";
                 play2.style.visibility="visible"
 
