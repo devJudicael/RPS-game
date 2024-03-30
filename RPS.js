@@ -23,7 +23,7 @@
 
 
 
-document.addEventListener("DOMContentLoaded", ()=> {
+
 
 let i;
 var ia  = Math.floor((Math.random() * 3 ) )+1;
@@ -218,8 +218,7 @@ all.forEach(image => {
 
    })
 
-   
-   })
+  
    
    
 
